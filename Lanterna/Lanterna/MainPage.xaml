@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lanterna.MainPage"
+             Title="Lanterninha"
+             BackgroundColor="#000000">
+     
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/> 
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   Text="Lanterninha"
+                   Style="{StaticResource titulo}"
+                   FontSize="50"
+                   TextColor="White"/>
+
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                    x:Name="btnOnOff"
+                    Text="OFF"
+                    TextColor="White"
+                    FontSize="50"
+                    Style="{StaticResource titulo}"
+                    HeightRequest="250"
+                    WidthRequest="200"
+                    CornerRadius="100"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#232323"
+                    BorderColor="red"
+                    BorderWidth="5" 
+                    Clicked="btnOnOff_Clicked"/>
+
+            
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                   HorizontalOptions="Center"
+                   Text="SITUAÇÃO DA BATERIA"
+                   Style="{StaticResource subTitulo}"
+            />
+
+            <Label Grid.Row="3" Grid.Column="0"
+                   HorizontalOptions="Center"
+                   Text="Carga restante: "
+                   Style="{StaticResource textocinza}"
+            />
+
+            <Label Grid.Row="4" Grid.Column="0"
+                   HorizontalOptions="Center"
+                   Text="Status da bateria: "
+                   Style="{StaticResource textocinza}"
+            />
+
+            <Label Grid.Row="5" Grid.Column="0"
+                   HorizontalOptions="Center"
+                   Text="Fonte de energia: "
+                   Style="{StaticResource textocinza}"
+            />
+
+            <Label Grid.Row="3" Grid.Column="1" x:Name="lbl_porcentagem_restante" Style="{StaticResource textobranco}"/>
+            <Label Grid.Row="4" Grid.Column="1" x:Name="lbl_status" Style="{StaticResource textobranco}"/>
+            <Label Grid.Row="5" Grid.Column="1" x:Name="lbl_fonte_carregamento" Style="{StaticResource textobranco}"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+                   x:Name="lbl_bateria_fraca"
+                   Style="{StaticResource textobranco }"
+                   FontAttributes="Italic"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Red"
+            />
+
+    </Grid> 
+
+</ContentPage>
